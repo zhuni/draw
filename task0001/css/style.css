@@ -1,0 +1,263 @@
+/**reset*/
+*
+{
+    margin: 0;
+    padding: 0;
+}
+/*common*/
+body
+{
+    background-color: #eee;
+}
+a{
+    text-decoration: none;
+}
+a:link
+{
+    color: #fff;
+}
+a:visited
+{
+    color: #fff;
+}
+a:hover
+{
+    color: #fff;
+    text-decoration: underline;
+}
+a:active
+{
+    color: #fff;
+}
+ul li
+{
+    list-style: none;
+}
+/*head*/
+header
+{
+    height: 80px;
+    width: 100%;
+    background-color: purple;
+    position: relative;
+}
+.common_center
+{
+    width: 980px;
+    margin: 0 auto;
+}
+.h_center
+{
+    position: relative;
+}
+#logo
+{
+    width: 120px;
+    height: 80px;
+    color: white;
+    float: left;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    line-height: 80px;
+}
+header .nav
+{
+    height: 80px;
+    float: right;
+}
+header .nav ul li
+{
+    list-style: none;
+    color: white;
+    font-family: SimSun;
+    font-size: 14px;
+    float:left;
+    margin-left: 28px;
+    margin-top: 59px;
+}
+header>a
+{
+    right: 10px;
+    bottom: 0;
+    z-index: 4;
+    position: absolute;
+}
+/*footer*/
+.footer
+{
+    background-color: #000;
+    color: #fff;
+}
+.nav_footer
+{
+    height: 36px;
+    border-bottom: 1px solid #3d3c3c;
+    font-size: 14px;
+    font-family: sans-serif;
+    text-align: center;
+    line-height: 36px;
+}
+.nav_footer ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.link_wrapper
+{
+    overflow: hidden;
+}
+.link_wrapper ul
+{
+    width: 200px;
+    float: left;
+    margin: 30px 0;
+}
+.link_wrapper ul li
+{
+    padding: 3px 0;
+}
+.link_wrapper ul li:first-child
+{
+    margin-bottom: 27px;
+}
+ul.last
+{
+    width: auto;
+}
+.copyright
+{
+    clear: both;
+    text-align:center;
+    padding-top: 50px;
+}
+.copyright div
+{
+    margin-bottom: 15px;
+}
+
+
+/*index.css*/
+.banner
+{
+    float: left;
+}
+.banner img
+{
+    width: 100%;
+    float: left;
+}
+.location
+{
+    position: relative;
+    clear: left;
+
+}
+.banner_text
+{
+    width: 340px;
+    padding: 10px 10px 30px 10px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: -moz-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%);
+    background: -ms-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 75%,rgba(255,255,255,0) 100%);
+}
+.banner_text h1
+{
+    font-size: 14px;
+    float: right;
+}
+.banner_text p
+{
+    clear: both;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.block
+{
+    width: 320px;
+    background-color: white;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: -3000px;
+    padding-bottom: 3000px;
+}
+.cb
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.cl_float
+{
+    overflow: hidden;
+    margin-bottom: 130px;
+}
+.block img
+{
+    width: 300px;
+    height: 180px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.block p
+{
+    font-size: 12px;
+    line-height: 1.7;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 25px;
+    
+}
+.introduction
+{
+    background: #ffffff;
+    width: 100%;
+}
+.introduction img
+{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -50px;
+
+}
+.introduction h1
+{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    font-family: "Century Gothic";
+}
+.introduction p
+{
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 1.7;
+    width: 600px;
+    margin: 30px auto 0;
+    padding-bottom: 100px;
+}
+/*blog.css*/
+.blog_middle
+{
+    overflow: hidden;
+}
+.blog_main
+{
+    width: 750px;
+    float:left;
+}
+.blog_side
+{
+    width: 220px;
+    float: right;
+}

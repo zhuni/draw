@@ -7,14 +7,12 @@
 </head>
 <body>
     <div class="container" >
-        <div id="picture" style="left:-600px;">
-            <img src="img/5.jpg"/>
+        <div id="picture">
             <img src="img/1.jpg"/>
             <img src="img/2.jpg"/>
             <img src="img/3.jpg"/>
             <img src="img/4.jpg"/>
             <img src="img/5.jpg"/>
-            <img src="img/1.jpg"/>
         </div>
         <span class="arrow" id="prev">&lt</span>
         <span class="arrow" id="next">&gt</span>
@@ -37,13 +35,7 @@
     function animate(offset)
     {
         index= index-offset/600;
-        var time = 2000;
-        var interval = 100;
-        var speed = offset/(time/interval);
-        function go()
-        {
-            var destination = picture.offsetLeft + offset;
-            picture.style.left = picture.offsetLeft+speed+'px';
+            picture.style.left = picture.offsetLeft+offset+'px';
             if(picture.offsetLeft==600)
             {
                 picture.style.left = -2400+'px';
@@ -54,13 +46,6 @@
                 picture.style.left = 0+'px';
                 index=1;
             }
-            if(picture.offsetLeft!= destination)
-            setTimeout(function(){
-                go();
-            },1000);
-        }
-        go();
-
 
     }
    function showDot()

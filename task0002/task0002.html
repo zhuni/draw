@@ -5,9 +5,8 @@
     <title></title>
 </head>
 <body>
-
+<script src="js/util.js"></script>
    <script>
-       "use strict";
        var srcObj = {
            a: 1,
            b: {
@@ -17,9 +16,9 @@
        };
        var message = "";
        var mae = Boolean(message);
-
        console.log(mae);
-
+       console.log(cloneObject(srcObj));
    </script>
+
 </body>
 </html>

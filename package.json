@@ -1,28 +1,20 @@
 {
-  "name": "express-app",
+  "name": "draw",
   "version": "1.0.0",
-  "description": "web developement with node and express",
-  "main": "meadowlark.js",
-  "dependencies": {
-    "express": "^4.14.0",
-    "express3-handlebars": "^0.5.2"
-  },
-  "devDependencies": {},
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zhuni/express-app.git"
-  },
-  "keywords": [
-    "node",
-    "express"
-  ],
-  "author": "zhuni",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zhuni/express-app/issues"
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
   },
-  "homepage": "https://github.com/zhuni/express-app#readme"
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0"
+  }
 }

@@ -1,1 +1,3 @@
-1. 能显示http请求状态码和所有重定向的浏览器插件 Ayima的Redirect Path
+1. npm install
+2. 将client/public/js/io.js中改成自己电脑的ip
+3. gulp server

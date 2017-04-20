@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style rel="stylesheet">
+        button {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>你画我猜</h1>
+<label for="name">请输入你的姓名</label>
+<input type="text" id="name">
+<button id="s">登陆</button>
+<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.js"></script> 
+
+
+<script>
+    Zepto(function($) {
+        console.log('dom ready');
+        console.log($('button'));
+        var ele = $('button').eq(0);
+        
+        ele.on('click', function() {
+            var playername = $('#name').val();
+            if(playername) {
+                document.cookie = "playername="+playername;
+                window.location.pathname = "/home.html";
+            } else {
+                alert('请输入用户名');
+            }
+
+        })
+    })
+</script>  
+</body>
+</html>
+
+

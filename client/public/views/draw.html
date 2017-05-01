@@ -1,69 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <title>你画我猜</title>
-
-    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/libs/h5-base.css" rel="stylesheet" type="text/css">
+    <link href="/css/draw.css" rel="stylesheet" type="text/css">
+    <script src="/libs/h5-base.js" type="text/javascript"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="/js/io.js" type="text/javascript"></script>
 </head>
 <body>
-<header>draw and guess</header>
-<main class="main">
-    <canvas id="draw-board" height="450">
-    </canvas>
-    <button class="reset-board">清空画布</button>
-</main>
-<section>
-    <div class="msg-box"></div>
-    <div class="input-box">
-        <input type="text" class="answer"></input>
-        <button class="sendAnswer">点击发送</button>
+<main class="main draw">
+    <header>你画我猜</header>
+
+    <div id="draw-wrap">
+        <canvas id="draw-board" height="450">
+        </canvas>
+        <div class="tips"></div>
+        <div class="reset-board">清除画板</div>
     </div>
-</section>
-<div class="game-role">
 
-</div>
-<section>
-    
-</section>
-<script src='/socket.io/socket.io.js'></script>
-<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.js"></script> 
-<script src="/js/io.js" type="text/javascript"></script>
-
-
-<script>
-socket.on('yourtime', function(data) {
-//     console.log(isMe);
-//     isMe = false;
-    alert('现在由'+data+'来画');
-    alert(playername == data);
-    if(playername == data) {
-        // alert('现在由你来画')
-        // console.log('wo can hua')
-        // drawListener();
-        isMe = true;
-        console.log(isMe+ '====');
-    } else {
-        isMe = false;
-    }
-});
-
-socket.on('gameover', function() {
-    alert('游戏结束');
-    window.location.pathname = '/index.html';
-})
-
-
-    socket.on('paint_sync', function(data) {
-        Ctrl.drawPts(ctx, data);
-    });
-    socket.on('reset', function(data) {
-		ctx.clearRect(0, 0, canvas.width, 450);
-    });
-
-</script>
+    <section>
+        <div class="msg-box"></div>
+        <div class="input-box clearfix">
+            <input type="text" class="answer-input"></input>
+            <div class="send-answer">发送</div>
+        </div>
+    </section>
+    <div class="game-role"></div>
+    <section></section>
+</main>
 <script src="/js/draw.js" type="text/javascript"></script>
-
 </body>
 </html>

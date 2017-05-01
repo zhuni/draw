@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style rel="stylesheet">
-        button {
-            background-color: red;
-        }
-    </style>
+    <title>你画我猜</title>
+    <link href="/libs/h5-base.css" rel="stylesheet" type="text/css">
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <script src="/libs/h5-base.js" type="text/javascript"></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="/js/io.js" type="text/javascript"></script>
 </head>
 <body>
-<h1>你画我猜</h1>
-<label for="name">请输入你的姓名</label>
-<input type="text" id="name">
-<button id="s">登陆</button>
-<script src="http://apps.bdimg.com/libs/zepto/1.1.4/zepto.js"></script> 
-
-
-<script>
-    Zepto(function($) {
-        console.log('dom ready');
-        console.log($('button'));
-        var ele = $('button').eq(0);
-        
-        ele.on('click', function() {
-            var playername = $('#name').val();
-            if(playername) {
-                document.cookie = "playername="+playername;
-                window.location.pathname = "/home.html";
-            } else {
-                alert('请输入用户名');
-            }
-
-        })
-    })
-</script>  
+    <div class="main">
+        <section class="login-head"></section>
+        <div class="login-wrap">
+            <input class="login-name" type="text" name="name" placeholder="请输入登录姓名" />
+            <div class="btn login-btn">登陆</div>
+        </div>
+    </div>
+    <script src="/js/index.js"></script>
 </body>
+
 </html>
-
-
